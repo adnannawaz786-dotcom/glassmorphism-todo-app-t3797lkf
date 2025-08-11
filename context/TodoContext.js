@@ -4,7 +4,7 @@
 
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
-const useTodoContext = () => {{ ... }};
+
 const TodoContext = createContext();
 
 const todoReducer = (state, action) => {
