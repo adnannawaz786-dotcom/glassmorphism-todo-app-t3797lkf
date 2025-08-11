@@ -4,6 +4,7 @@
 
 import React, { createContext, useContext, useReducer, useEffect } from 'react';
 
+const useTodoContext = () => {{ ... }};
 const TodoContext = createContext();
 
 const todoReducer = (state, action) => {
@@ -76,7 +77,7 @@ const initialState = {
   error: null,
 };
 
-export const TodoProvider = ({ children }) => {
+const TodoProvider = ({ children }) => {
   const [state, dispatch] = useReducer(todoReducer, initialState);
 
   // Load todos from localStorage on mount
@@ -191,7 +192,7 @@ export const TodoProvider = ({ children }) => {
   );
 };
 
-export const useTodoContext = () => {
+const useTodoContext = () => {
   const context = useContext(TodoContext);
   if (!context) {
     throw new Error('useTodoContext must be used within a TodoProvider');
