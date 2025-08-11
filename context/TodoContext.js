@@ -200,4 +200,5 @@ const useTodoContext = () => {
   return context;
 };
 
-export { TodoProvider as default, useTodoContext };
+export { TodoProvider, useTodoContext };
+
